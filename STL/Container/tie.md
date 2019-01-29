@@ -18,7 +18,7 @@ int main() {
 ```
 
 ## tie를 사용하여 swap을 해보자.
-```{.C++}
+~~~cpp
 #include <tuple>
 #include <iostream>
 using namespace std;
@@ -35,4 +35,4 @@ int main() {
 	tie(a, b) = make_tuple(b, a);
 	cout << a << ' ' << b << '\n'; // output : 2 1
 	return 0;
-```
+~~~

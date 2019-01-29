@@ -6,7 +6,7 @@ Container pair
 - pair를 사용하기 위해서는 **utility library**를 사용해야 한다.
 - 하지만! **algorithm, vector**에 포함하고 있어서 따로 include 하지 않아도 된다.
 ## pair 예시 코드
-```{.C++}
+~~~cpp
 #include <utility>
 #include <iostream>
 using namespace std;
@@ -27,5 +27,4 @@ int main() {
 
 	return 0;
 }
-</pre></code>
-```
+~~~

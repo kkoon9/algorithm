@@ -10,7 +10,7 @@ Iterator 반복자
 - 양방향(bidirectional) iterator : 순방향 반복자 기능에 역방향 이동(--)이 가능한 반복자 (ex) list, set, multiset, map, multimap
 - 임의 접근(random accress) iterator : 양방향 반복자 기능에 +, -, +=, -=, [] 연산이 가능한 반복자 (ex) vector와 deque
 ## iterator 예시 코드
-```{.C++}
+~~~cpp
 #include <iostream>
 #include <vector>
 using namespace std;
@@ -31,4 +31,4 @@ int main() {
 
 	return 0;
 }
-```
+~~~

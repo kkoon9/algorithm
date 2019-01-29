@@ -4,7 +4,7 @@ Container vector
 - 동적 배열로서 자신의 크기를 조정할 수 있다.
 - vector를 사용하기 위해서는 **vector library**를 사용해야 한다.
 ## vector 예시 코드
-```{.C++}
+~~~Cpp
 #include <vector>
 #include <iostream>
 using namespace std;
@@ -22,13 +22,12 @@ int main() {
 	vector<vector<int>> v8(n, vector<int>(m)); // v8[n][m] 과 같은 2차원 배열
 	return 0;
 }
-```
-
+~~~
 ## Q. size와 capacity의 차이
 - size : 데이터가 채워진 원소의 개수
 - capacity : 할당된 메모리 공간
 ### 예시 코드
-```{.C++}
+~~~cpp
 #include <iostream>
 #include <vector>
 using namespace std;
@@ -60,6 +59,6 @@ v[13] : 14 v.size() : 14 v.capacity() : 19
 v[14] : 15 v.size() : 15 v.capacity() : 19
 v[15] : 16 v.size() : 16 v.capacity() : 19
 */
-```
+~~~
 - 위처럼 capacity가 모자랄 경우 capacity/2 만큼의 capacity를 늘려간다.
 - 만약 입력될 원소의 개수를 알 수 있다면 reserve를 사용하여 미리 capacity 메모리를 할당해 놓으면 효율적이다.
