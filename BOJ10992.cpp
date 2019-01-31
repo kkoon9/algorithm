@@ -14,9 +14,15 @@ int main(int argc, char** argv) {
 	int i, j;
 	i = j = (length - 1) / 2;
 	while (--N) {
+        int count = 0; // 별이 다 찍혔는지 체크해주는 변수
 		for (int idx = 0; idx < length; idx++) {
-			if (idx == i || idx == j)
+            if(count == 2) break; // 별이 두 개 다 찍히면 break
+			if (idx == i || idx == j){
 				cout << "*";
+                count++;
+                if(i == j) // 첫 번째 별은 한 개이므로
+                    count++;
+            }
 			else
 				cout << " ";
 		}
