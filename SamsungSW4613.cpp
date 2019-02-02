@@ -8,8 +8,7 @@ int main(int argc, char** argv)
     int T;
     cin >> T;
  
-    for (test_case = 1; test_case <= T; ++test_case)
-    {
+    for (test_case = 1; test_case <= T; ++test_case) {
         int result1 = 0, result2 = 0, result3 = 0;
         char x;
         int M, N;
@@ -22,7 +21,7 @@ int main(int argc, char** argv)
                 else if (x == 'B')B++;
                 else R++;
             }
-            if (i == 1) // 1번째는 무조건 하얀색 
+            if (i == 1)
                 result1 = result2 = result3 = B + R;
             else if (i == 2) {
                 result1 += B + R;
@@ -41,7 +40,7 @@ int main(int argc, char** argv)
                     result1 += W + B;
                     result3 += W + B;
             }
-            else{
+            else {
                 if (result3 > result2) result3 = result2 + W + B;
                 else result3 += W + B;
                 if (result2 > result1) result2 = result1 + W + R;
@@ -63,7 +62,7 @@ int main(int argc, char** argv)
                 printf("#%d %d\n", test_case, result1);
         }
  
-         
+ 
     }
     return 0;
 }
