@@ -24,3 +24,6 @@ int main() {
     l.reverse(); print(l); // -7 6 -5 4 -3 2 1
 }
 ~~~
+## list 예제
+[BOJ1406](../BOJ1406.cpp)    
+[BOJ2346](../BOJ2346.cpp)
