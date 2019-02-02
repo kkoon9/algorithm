@@ -3,7 +3,7 @@ Container deque
 ## deque란?
 - 시퀀스 컨테이너이며 배열 기반 컨테이너이다.
 - vector 컨테이너의 단점을 보완하는 특징을 갖는다.
-- pair를 사용하기 위해서는 **deque library**를 사용해야 한다.
+- deque를 사용하기 위해서는 **deque library**를 사용해야 한다.
 ## deque 특징
 - 크기가 가변적이다.
 - 중간에 데이터 삽입 및 삭제가 용이하지 않다.
