@@ -3,40 +3,33 @@
 #include <string>
 using namespace std;
 int main() {
-	string s;
-	cin >> s;
-
-	list<char> editor(s.begin(), s.end());
-	auto cursor = editor.end();
-
-	int n;
-	cin >> n;
-	while (n--) {
+	string input;
+	cin >> input;
+	list<char> editor(input.begin(), input.end());
+	auto cursor = editor.end(); // iterator
+	int N;
+	cin >> N;
+	for (int i = 0; i < N; i++) {
 		char cmd;
 		cin >> cmd;
-		if (cmd == 'L' && cursor != editor.begin()) {
-				--cursor;
-		}
-		else if (cmd == 'D' && cursor != editor.end()) {
-				++cursor;
-		}
+		if (cmd == 'L' && cursor != editor.begin())
+			--cursor;
+		else if (cmd == 'D' && cursor != editor.end())
+			++cursor;
 		else if (cmd == 'B' && cursor != editor.begin()) {
-				auto temp = cursor;
-				--cursor;
-				editor.erase(cursor);
-				cursor = temp;
+			auto temp = cursor;
+			--cursor;
+			editor.erase(cursor);
+			cursor = temp;
 		}
 		else if (cmd == 'P') {
-			char c;
-			cin >> c;
-			editor.insert(cursor, c);
+			char x;
+			cin >> x;
+			editor.insert(cursor, x);
 		}
 	}
-
-	for (char c : editor) {
-		cout << c;
-	}
+	for (char x : editor)
+		cout << x;
 	cout << '\n';
-
 	return 0;
 }
