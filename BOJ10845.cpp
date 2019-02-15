@@ -68,10 +68,10 @@ struct Queue {
 	Queue() {
 		size = 0;
         frontIndex = 0;
-        backIndex = 0;
+        backIndex = -1;
 	}
 	void push(int num) {
-		data[size] = num;
+		data[backIndex + 1] = num;
 		size += 1;
         backIndex += 1;
 	}
@@ -93,13 +93,13 @@ struct Queue {
 		if (empty())
 			return -1;
 		else 
-			return data[frontIndex++];
+			return data[frontIndex];
 	}
    	int back() {
 		if (empty())
 			return -1;
 		else 
-			return data[backIndex--];
+			return data[backIndex];
 	}
 
 };
@@ -125,7 +125,7 @@ int main() {
 			cout << '\n';
 		}
 		else if (str == "size") {
-			cout << q.size << '\n';
+			cout << q.size() << '\n';
 		}
 		else if (str == "empty") {
 			cout << q.empty() << '\n';
