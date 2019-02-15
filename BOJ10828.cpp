@@ -130,3 +130,40 @@ struct Stack {
 			return data[size - 1];
 	}
 };
+
+int main() {
+	int N, x;
+	cin >> N;
+	Stack s;
+	for (int i = 0; i < N; i++) {
+		string str;
+		cin >> str;
+		if (str == "push") {
+			cin >> x;
+			s.push(x);
+		}
+		else if (str == "pop") {
+			if (s.empty())
+				cout << "-1";
+			else {
+				cout << s.top();
+				s.pop();
+			}
+			cout << '\n';
+		}
+		else if (str == "size") {
+			cout << s.size << '\n';
+		}
+		else if (str == "empty") {
+			cout << s.empty() << '\n';
+		}
+		else if (str == "top") {
+			if (s.empty())
+				cout << "-1";
+			else 
+				cout << s.top();
+			cout << '\n';
+		}
+	}
+	return 0;
+}
