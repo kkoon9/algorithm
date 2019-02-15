@@ -125,7 +125,7 @@ int main() {
 			cout << '\n';
 		}
 		else if (str == "size") {
-			cout << q.size() << '\n';
+			cout << q.size << '\n';
 		}
 		else if (str == "empty") {
 			cout << q.empty() << '\n';
