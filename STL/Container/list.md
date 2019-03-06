@@ -25,5 +25,6 @@ int main() {
 }
 ~~~
 ## list 예제
-[BOJ1406](../BOJ1406.cpp)    
-[BOJ2346](../BOJ2346.cpp)
+[BOJ1406](https://github.com/kkoon9/algorithm/blob/master/BOJ1406.cpp)  
+[BOJ2346](https://github.com/kkoon9/algorithm/blob/master/BOJ2346.cpp)
+

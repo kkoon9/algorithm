@@ -24,4 +24,4 @@ int main() {
 }
 ~~~
 ## deque 예제
-[BOJ10866](../BOJ10866.cpp)
+[BOJ10866](https://github.com/kkoon9/algorithm/blob/master/BOJ10866.cpp)
