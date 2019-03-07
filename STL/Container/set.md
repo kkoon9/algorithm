@@ -74,6 +74,7 @@ int main() {
 }
 ~~~
 ## set 예제
-[BOJ10867](../BOJ10867.cpp)    
-[BOJ10815](../BOJ10815.cpp)    
-[BOJ10816](../BOJ10816.cpp)    
+[BOJ10867](https://github.com/kkoon9/algorithm/blob/master/BOJ10867.cpp)  
+[BOJ10815](https://github.com/kkoon9/algorithm/blob/master/BOJ10815.cpp)    
+[BOJ10816](https://github.com/kkoon9/algorithm/blob/master/BOJ10816.cpp)
+    

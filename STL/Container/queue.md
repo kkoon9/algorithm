@@ -23,4 +23,4 @@ int main() {
 }
 ~~~
 ## queue 예제
-[BOJ10828](./BOJ10828.cpp)
+[BOJ10828](https://github.com/kkoon9/algorithm/blob/master/BOJ10828.cpp)
