@@ -5,7 +5,7 @@ int LCM(int a, int b);
 int main() {
 	int A, B;
 	cin >> A >> B;
-	cout << GCD(A, B) << '\n' << LCD(A, B) << '\n';
+	cout << GCD(A, B) << '\n' << LCM(A, B) << '\n';
 	return 0;
 }
 int GCD(int a, int b) {
@@ -16,6 +16,7 @@ int GCD(int a, int b) {
 	}
 	return a;
 }
+
 int LCM(int a, int b) {
 	int g = GCD(a, b);
 	return g * (a / g) * (b / g);
