@@ -60,3 +60,7 @@ LCM l = g * (a/g) * (b/g)
 - 10진법 수 N을 B진번으로 바꾸려면 N이 0이 될 때까지 나머지를 계속구하면 된다.  
 [진법 변환](https://github.com/kkoon9/algorithm/blob/master/BOJ11005.md)  
 [진법 변환 2](https://github.com/kkoon9/algorithm/blob/master/BOJ2745.md)
+
+## A진법 => B진법
+- A진법 => 10진법 => B진법 순으로 바꾸면 된다.  
+[진법 변환](https://github.com/kkoon9/algorithm/blob/master/BOJ11576.md)
