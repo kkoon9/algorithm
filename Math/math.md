@@ -169,3 +169,7 @@ if (n > 1)
     cout << n << '\n';
 ~~~  
 [소인수분해](https://github.com/kkoon9/algorithm/blob/master/BOJ11653.md)
+
+## 팩토리얼
+- N! = 1 x 2 x ... x N
+- 팩토리얼은 매우 큰 값이다. 범위 설정에 주의하자.
