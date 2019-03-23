@@ -7,6 +7,7 @@ DFS
 - DFS는 재귀 호출을 이용해서 구현할 수 있다.
 ~~~cpp
 // 인접 행렬을 이용한 구현
+int G[10][10];
 void dfs(int x){
     check[x] = true;
     cout << x;
@@ -16,6 +17,7 @@ void dfs(int x){
     }
 }
 // 인접 리스트를 이용한 구현
+vector <vector<int>> G(n+1);
 void dfs(int x){
     check[x] = true;
     cout << x;
