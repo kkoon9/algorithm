@@ -30,13 +30,13 @@ int main() {
 // Bottom-up 방식
 #include <iostream>
 using namespace std;
-int memo[1000001];
+int memo[1000001]; // N의 최대값이 1000000이므로
 int main() {
 	int n;
 	cin >> n;
 	memo[1] = 0;
 	for (int i = 2; i <= n; i++) {
-		memo[i] = memo[i - 1] + 1;
+		memo[i] = memo[i - 1] + 1; // 기본 memo[i]에 들어갈 수
 		if (i % 2 == 0 && memo[i] > memo[i / 2] + 1) {
 			memo[i] = memo[i / 2] + 1;
 		}
