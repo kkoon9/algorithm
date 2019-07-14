@@ -3,24 +3,35 @@ using namespace std;
 struct Fibonacci {
 	int zero = 0;
 	int one = 0;
-};// zero one count
+};
+void dp(struct Fibonacci memo[], int N);
+void print(struct Fibonacci memo[], int T);
+
 int main() {
-	struct Fibonacci arr[41];
-	/* 0과 1만 초기화해준다. */
-	arr[0].zero = 1;
-	arr[0].one = 0;
-	arr[1].zero = 0;
-	arr[1].one = 1;
-	for (int i = 2; i <= 40; i++) {
-		arr[i].zero = arr[i - 2].zero + arr[i - 1].zero;
-		arr[i].one = arr[i - 2].one + arr[i - 1].one;
-	}
-	int T;
+	int const memoSize = 41; // memorization 배열의 크기
+	int T; // Testcase
+	struct Fibonacci memo[memoSize];
+
+	dp(memo, memoSize);
 	cin >> T;
+	print(memo, T);
+	return 0;
+}
+void dp(struct Fibonacci memo[], int N) {
+	memo[0].zero = 1;
+	memo[0].one = 0;
+	memo[1].zero = 0;
+	memo[1].one = 1;
+	for (int i = 2; i < N; i++) {
+		memo[i].zero = memo[i - 2].zero + memo[i - 1].zero;
+		memo[i].one = memo[i - 2].one + memo[i - 1].one;
+	}
+}
+void print(struct Fibonacci memo[], int T) {
 	for (int test_case = 0; test_case < T; test_case++) {
 		int x;
 		cin >> x;
-		cout << arr[x].zero << ' ' << arr[x].one << '\n';
+		cout << memo[x].zero << ' ' << memo[x].one << '\n';
 	}
-	return 0;
+
 }
