@@ -1,11 +1,46 @@
+#pragma warning(disable: 4996) 
 #include <iostream>
 #include <algorithm>
 #include <string>
-#include <vector>
 #include <queue>
 using namespace std;
-vector<int> a[1001];
-bool check[1001];
+
+const int MAX = 1001;
+vector<int> a[MAX];
+
+bool check[MAX];
+void dfs(int node);
+void bfs(int start);
+void init(bool check[], int n);
+
+int main() {
+	int n, m, start;
+	cin >> n >> m >> start;
+
+	/* input part*/
+	for (int i = 0; i < m; i++) {
+		int u, v;
+		scanf("%d %d", &u, &v);
+		a[u].push_back(v);
+		a[v].push_back(u);
+	}
+
+	/* sort part*/
+	for (int i = 1; i <= n; i++) 
+		sort(a[i].begin(), a[i].end());
+	
+	dfs(start);
+	printf("\n");
+	init(check, n);
+	bfs(start);
+	printf("\n");
+
+	return 0;
+}
+void init(bool check[], int n) {
+	for (int i = 0; i <= n; i++)
+		check[i] = false;
+}
 void dfs(int node) {
 	check[node] = true;
 	printf("%d ", node);
@@ -16,6 +51,7 @@ void dfs(int node) {
 		}
 	}
 }
+
 void bfs(int start) {
 	queue<int> q;
 	check[start] = true;
@@ -32,24 +68,4 @@ void bfs(int start) {
 			}
 		}
 	}
-}
-int main() {
-	int n, m, start;
-	scanf("%d %d %d", &n, &m, &start);
-	for (int i = 0; i < m; i++) {
-		int u, v;
-		scanf("%d %d", &u, &v);
-		a[u].push_back(v);
-		a[v].push_back(u);
-	}
-	for (int i = 1; i <= n; i++) {
-		sort(a[i].begin(), a[i].end());
-	}
-	dfs(start);
-	printf("\n");
-	for (int i = 0; i <= 1000; i++)
-		check[i] = false;
-	bfs(start);
-	printf("\n");
-	return 0;
 }
