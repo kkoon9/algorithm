@@ -3,7 +3,7 @@ Baekjoon 1149
 RGB 거리  <https://www.acmicpc.net/problem/1149>
 ---------------
 - - -
-### 다이나믹 프로그래밍으로 풀어보자.
+### 다이나믹 프로그래밍
 - - -
 ## 함수 설명
 - min : red, green, blue 중 최소값을 리턴하는 함수
