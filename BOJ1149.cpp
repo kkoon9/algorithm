@@ -1,36 +1,32 @@
 #include <iostream>
 using namespace std;
-void min(int a, int b, int c) {
-	if (a > b)
-		if (b > c)
-			cout << c << '\n';
-		else
-			cout << b << '\n';
-	else
-		if (a > c)
-			cout << c << '\n';
-		else
-			cout << a << '\n';
-}
-int min(int a, int b) {
-	if (a > b) return b;
-	else return a;
-}
+int min(int a, int b, int c);
+int dp(int N);
+
 int main() {
-	int red = 0;
-	int green = 0;
-	int blue = 0;
-	int i = 0;
 	int N;
+	int result;
 	cin >> N;
-	for (i = 0; i < N; i++) {
-		int r, g, b;
-		cin >> r >> g >> b;
-		r = min(green, blue) + r;
-		g = min(red, blue) + g;
-		b = min(red, green) + b;
-		red = r, green = g, blue = b;
-	}
-	min(red, green, blue);
+	result = dp(N);
+	cout << result << '\n';
 	return 0;
+}
+
+int min(int a, int b, int c) {
+	if (a > b)
+		return b < c ? b : c;
+	else
+		return a < c ? a : c;
+}
+int dp(int N) {
+	int red = 0, green = 0, blue =0;
+	for (int i = 0; i < N; i++) {
+		int R, G, B;
+		cin >> R >> G >> B;
+		R = (green < blue ? green : blue) + R;
+		G = (red < blue ? red : blue) + G;
+		B = (red < green ? red : green) + B;
+		red = R, green = G, blue = B;
+	}
+	return min(red, green, blue);
 }
