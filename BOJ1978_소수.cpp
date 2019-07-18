@@ -1,15 +1,7 @@
 #include <iostream>
 using namespace std;
-int prime(int num) {
-	if (num < 2)
-		return 0;
-	else {
-		for (int i = 2; i*i <= num; i++)
-			if (num % i == 0)
-				return 0;
-	}
-	return 1;
-}
+
+int prime(int num);
 int main() {
 	int N;
 	cin >> N;
@@ -21,4 +13,15 @@ int main() {
 	}
 	cout << cnt << '\n';
 	return 0;
+}
+
+int prime(int num) {
+	if (num < 2)
+		return 0;
+	else {
+		for (int i = 2; i*i <= num; i++)
+			if (num % i == 0)
+				return 0;
+	}
+	return 1;
 }
