@@ -1,17 +1,19 @@
 #include <iostream>
 using namespace std;
-int memo[41];
+
+const int MAX = 41;
+int memo[MAX];
+
+void DP(int memo[], int N);
 int main() {
 	int N,M;
-	cin >> N;
-    memo[0] = 1;
-	memo[1] = 1;
-	memo[2] = 2;
 	long long result = 1;
-	for (int i = 3; i <= N; i++) 
-		memo[i] = memo[i - 1] + memo[i - 2];
 	int fix;
 	int pin = 1; // 고정석 위치 초기값은 1이다.
+
+	cin >> N;
+	DP(memo,N);
+
 	cin >> M;
 	for (int i = 1; i <= M; i++) {
 		cin >> fix;
@@ -20,4 +22,13 @@ int main() {
 	}
 	result *= memo[N - pin + 1]; // 마지막 pin과 좌석 끝
     cout << result << '\n';
+}
+
+void DP(int memo[], int N){
+    memo[0] = 1;
+	memo[1] = 1;
+	memo[2] = 2;
+	for (int i = 3; i <= N; i++) 
+		memo[i] = memo[i - 1] + memo[i - 2];
+
 }
