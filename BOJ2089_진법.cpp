@@ -1,5 +1,18 @@
 #include <iostream>
 using namespace std;
+void base(int n);
+
+int main() {
+	int N;
+	cin >> N;
+	if (N == 0)
+		cout << "0";
+	else 
+		base(N);	
+	cout << "\n";
+	return 0;
+}
+
 void base(int n) {
 	if (n == 0)
 		return;
@@ -14,14 +27,4 @@ void base(int n) {
 			base((-n + 1) / 2);
 		cout << "1";
 	}
-}
-int main() {
-	int N;
-	cin >> N;
-	if (N == 0)
-		cout << "0";
-	else 
-		base(N);	
-	cout << "\n";
-	return 0;
 }
