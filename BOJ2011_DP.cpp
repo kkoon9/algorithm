@@ -1,8 +1,11 @@
 #include <iostream>
 #include <string>
 using namespace std;
-int memo[5001];
-int mod = 1000000;
+
+const int mSize = 5001;
+const int MOD = 1000000;
+int memo[mSize];
+
 int main() {
     string s;
     cin >> s;
@@ -13,7 +16,7 @@ int main() {
         int x = s[i] - '0';
         if (1 <= x && x <= 9) {
             memo[i] += memo[i-1];
-            memo[i] %= mod;
+            memo[i] %= MOD;
         }
         if (i==1) {
             continue;
@@ -24,7 +27,7 @@ int main() {
         x = (s[i-1]-'0')*10 + (s[i]-'0');
         if (10 <= x && x <= 26) {
             memo[i] += memo[i-2];
-            memo[i] %= mod;
+            memo[i] %= MOD;
         }
     }
     cout << memo[n] << '\n';
