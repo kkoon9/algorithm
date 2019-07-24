@@ -2,6 +2,7 @@
 using namespace std;
 long long memo[201][201];
 long long mod = 1000000000;
+
 int main() {
 	int n,k;
 	cin >> n >> k;
