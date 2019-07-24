@@ -1,9 +1,22 @@
 #include <iostream>
 using namespace std;
-long long memo[91][2];
+
+const int MAX = 91;
+long long memo[MAX][2];
+
+void DP(long long memo[][2], int n);
 int main() {
 	int n;
+	long long result = 0;
 	cin >> n;
+	DP(memo, n);
+	for (int i = 0; i < 2; i++)
+		result += memo[n][i];
+	cout << result << '\n';
+	return 0;
+}
+
+void DP(long long memo[][2], int n) {
 	memo[1][0] = 0;
 	memo[1][1] = 1;
 	for (int i = 2; i <= n; i++) {
@@ -15,9 +28,4 @@ int main() {
 				memo[i][j] += memo[i - 1][j - 1];
 		}
 	}
-	long long result = 0;
-	for (int i = 0; i < 2; i++)
-		result += memo[n][i];
-	cout << result << '\n';
-	return 0;
 }
