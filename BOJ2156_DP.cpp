@@ -1,12 +1,22 @@
 #include <iostream>
 using namespace std;
-long long memo[10001];
-long long input[10001];
+
+const int MAX = 10001;
+long long memo[MAX];
+long long input[MAX];
+
+void DP(int memo[], int input[], int n);
 int main() {
 	int n;
 	cin >> n;
 	for (int i = 1; i <= n; i++) 
 		cin >> input[i];
+	DP(memo,input,n);
+	cout << memo[n] << '\n';
+	return 0;
+}
+
+void DP(int memo[], int input[], int n){
 	memo[1] = input[1];
 	memo[2] = input[1] + input[2];
 	for (int i = 3; i <= n; i++) {
@@ -16,6 +26,5 @@ int main() {
 		if (memo[i] < memo[i - 3] + input[i - 1] + input[i])
 			memo[i] = memo[i - 3] + input[i - 1] + input[i];
 	}
-	cout << memo[n] << '\n';
-	return 0;
 }
+
