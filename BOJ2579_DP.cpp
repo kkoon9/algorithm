@@ -1,7 +1,8 @@
 #include <iostream>
 using namespace std;
-int memo[301][3];
-int input[301];
+const int MAX = 301;
+int memo[MAX][3];
+int input[MAX];
 int max(int a, int b);
 int main() {
 	int n;
