@@ -5,11 +5,6 @@ Baekjoon 7785
 - - -
 ### set과 iterator를 사용하자.
 - - -
-## 변수 설명
-- name : 사원 이름(input)
-- inout : entry / leave (input)
-- n : 명령 개수 (input)
-- s : string을 자료형으로 갖는 set 컨테이너
 
 ## 코드 설명
 - n번 반복문을 통해 name과 inout을 입력받는다.
