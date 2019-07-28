@@ -1,12 +1,7 @@
 #include <iostream>
 #include <string>
 using namespace std;
-long long square(int a, int b) {
-	long long result = 1;
-	for (int i = 0; i < a; i++) 
-		result *= b;
-	return result;
-}
+long long square(int a, int b);
 int main() {
 	string N; // input
 	int B; // base
@@ -23,4 +18,11 @@ int main() {
 	}
 	cout << output << '\n';
 	return 0;
+}
+
+long long square(int a, int b) {
+	long long result = 1;
+	for (int i = 0; i < a; i++) 
+		result *= b;
+	return result;
 }
