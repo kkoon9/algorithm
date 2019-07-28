@@ -4,12 +4,6 @@ Baekjoon 2331
 ---------------
 ### dfs를 사용하자!
 - - -
-## 변수 설명
-- dis : 수열을 가지는 vector
-- A : dis[1] (input)
-- P : 제곱수 (input)
-- flag : dfs 끝내는 bool형 변수
-- count : 반복 수열의 개수
 ## 함수 설명
 - pow : 제곱값을 리턴해준다.
 - D : 각 자리수를 1의 자리로 바꿔주는 함수
@@ -19,5 +13,3 @@ Baekjoon 2331
 - A를 dis에 넣어준다.
 - flag가 true로 바뀔 때까지 반복하는데 dfs로 A의 값을 계속 바꿔준다.
 - flag가 true가 되면 A가 나올 때까지 count를 센다.
-## 기억해야 할 것
-- flag 값으로 탈출하는 것을 잘 익히자.
