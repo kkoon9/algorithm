@@ -41,15 +41,12 @@ int main() {
 			l.erase(it);
 			it = temp;
 			for (int i = 1; i < step; i++) {
-				if (it == l.begin()) {
+				if (it == l.begin())
 					it = l.end();
-				}
 				--it;
 			}
 		}
 	}
-
 	cout << l.front().second << '\n';
-
 	return 0;
 }

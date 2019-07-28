@@ -5,11 +5,6 @@ Baekjoon 2346
 - - -
 ### list와 iterator를 사용하자.
 - - -
-## 변수 설명
-- l : pair<int, int>를 갖는 리스트
-- n : 리스트에 들어갈 숫자의 개수
-- it : list의 iterator
-- step : 이동해야 하는 수 (-n <= step =< n)
 ## 코드 설명
 - 먼저 n을 입력받아 1~n까지 리스트 l에 넣어준다.
 - 해당 원소를 출력해준 뒤 그 해당 step만큼 이동해준다.
