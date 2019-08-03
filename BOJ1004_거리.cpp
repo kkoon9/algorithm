@@ -1,4 +1,5 @@
 #include <iostream>
+#include <math.h>
 using namespace std;
 
 int main() {
@@ -18,19 +19,12 @@ int main() {
 		cin >> n;
 		for (int i = 0;i < n;i++) {
 			cin >> cx >> cy >> r;
-			int minX = cx - r;
-			int minY = cy - r;
-			int maxX = cx + r;
-			int maxY = cy + r;
-		
-			if ((x1 > minX) && (y1 > minY) && (x1 < maxX) && (y1 < maxY)) {
+			double dis1 = sqrt((cx - x1) * (cx - x1) + (cy - y1) * (cy - y1));
+			double dis2 = sqrt((cx - x2) * (cx - x2) + (cy - y2) * (cy - y2));
+			if (r < dis1 && r < dis2)
+				continue;
+			else if (r < dis1 || r < dis2) {
 				count++;
-				if ((x2 > minX) && (y2 > minY) && (x2 < maxX) && (y2 < maxY))
-					count--;
-			}
-			else {
-				if ((x2 > minX) && (y2 > minY) && (x2 < maxX) && (y2 < maxY))
-					count++;
 			}
 		}
 		cout << count << endl;
