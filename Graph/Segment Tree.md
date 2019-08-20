@@ -7,6 +7,7 @@
 - 부모 노드의 값은 자식 노드 값의 합이고, 리프 노드는 A 배열의 각 요소들이다.
 - A 배열의 크기가 N이라면?  
 리프 노드의 개수 : N  
+높이 h : logN  
 배열의 크기 : 2^(H+1)  
 ![세그먼트 트리 인덱스](https://github.com/kkoon9/algorithm/blob/master/img/segment_tree_index.png)
 - 배열의 i 번째 요소의 자식 노드의 값은 2*i, 2*i+1이다.
