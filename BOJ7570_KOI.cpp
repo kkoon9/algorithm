@@ -8,7 +8,7 @@ int main() {
 	ios::sync_with_stdio(false);
 	cin.tie(NULL);
 	cout.tie(NULL);
-	int N, r, x= 0;
+	int N, r = 0, x= 0;
 	cin >> N;
 	for (int i = 1;i <= N;i++) {
 		cin >> x;
