@@ -1,4 +1,4 @@
-Baekjoon 1859
+Samsung Expert Academy 1859
 =============
 백만 장자 프로젝트 (D2)
 ---------------
