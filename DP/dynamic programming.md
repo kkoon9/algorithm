@@ -11,13 +11,13 @@ Dynamic Programming (이하 DP)
 - 그래서 DP은 같은 subproblem들이 없다면 사용하기 힘들다.  
 반복할 필요가 없다면 솔루션을 저장할 필요가 없기 때문이다. 
 - 재귀로 풀어지는 많은 subproblem들로 이루어진 유명한 문제로는 피보나치 수가있다. 
-~~~cpp
-int fib(int n)
-{
-   if ( n <= 1 )
-      return n;
-   return fib(n-1) + fib(n-2);
-}
+~~~cpp  
+   int fib(int n)
+   {
+      if ( n <= 1 )
+         return n;
+      return fib(n-1) + fib(n-2);
+   }
 ~~~
 ## 2. Optimal Substructure
 - 어떤 한 문제의 정답은 일정하다.  
@@ -43,5 +43,4 @@ ex) 어떤 문제이든 4번째 피보나치( fib(4) ) 수는 항상 같다.
 - 1 ~ n 까지
 ## 어떤 방법이 더 빠를까?
 - Tabulation(상향식, Bottom-UP) 방법이 더 빠르다.
-- BOJ1463를 참고하자.  
-[BOJ1463](https://github.com/kkoon9/algorithm/blob/master/BOJ1463.md)
+- BOJ1463를 참고하자.
